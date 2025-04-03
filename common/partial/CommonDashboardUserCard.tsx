@@ -13,7 +13,6 @@ const CommonDashboardUserCard = () => {
 			position='Team Lead'
 			mail={`${USERS.SAM.username}@site.com`}
 			phone='1234567'
-			onChat={() => router.push(`../${demoPagesMenu.chat.subMenu.withListChat.path}`)}
 			src={USERS.SAM.src}
 			color={USERS.SAM.color}
 		/>
