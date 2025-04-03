@@ -11,7 +11,7 @@ import { ThemeContextProvider } from '../context/themeContext';
 import useDarkMode from '../hooks/useDarkMode';
 import COLORS from '../common/data/enumColors';
 import { getOS } from '../helpers/helpers';
-import steps, { styles } from '../steps';
+import steps from '../steps';
 import Portal from '../layout/Portal/Portal';
 import Wrapper from '../layout/Wrapper/Wrapper';
 import App from '../layout/App/App';
@@ -43,7 +43,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 				<ThemeProvider theme={theme}>
 					<TourProvider
 						steps={steps}
-						styles={styles}
 						showNavigation={false}
 						showBadge={false}>
 						<App>
