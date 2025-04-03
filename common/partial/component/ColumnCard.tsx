@@ -271,19 +271,7 @@ const ColumnCard: FC<IColumnCard> = ({
 										<CardTitle>Comments</CardTitle>
 									</CardLabel>
 								</CardHeader>
-								<CardBody>
-									{/*<Chat>*/}
-									{/*	{CHATS.CHLOE_VS_JOHN.map((msg) => (*/}
-									{/*		<ChatGroup*/}
-									{/*			key={msg.id}*/}
-									{/*			messages={msg.messages}*/}
-									{/*			// @ts-ignore*/}
-									{/*			user={msg.user}*/}
-									{/*			isReply={msg.isReply}*/}
-									{/*		/>*/}
-									{/*	))}*/}
-									{/*</Chat>*/}
-								</CardBody>
+								
 								<CardFooter className='d-block'>
 									<InputGroup>
 										<Textarea />
