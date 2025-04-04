@@ -21,13 +21,6 @@ export const SubHeaderRight: FC<ISubHeaderRightProps> = ({ children, className }
 	);
 };
 
-interface ISubheaderSeparatorProps {
-	className?: string;
-}
-export const SubheaderSeparator: FC<ISubheaderSeparatorProps> = ({ className }) => {
-	return <div className={classNames('subheader-separator', className)} />;
-};
-
 export interface ISubHeaderProps {
 	children: ReactNode;
 	className?: string;

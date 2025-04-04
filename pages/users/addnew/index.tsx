@@ -8,7 +8,7 @@ import { useFormik } from 'formik';
 import Icon from '../../../components/icon/Icon';
 import PageWrapper from '../../../layout/PageWrapper/PageWrapper';
 import { Pages } from '../../../menu';
-import SubHeader, { SubHeaderLeft, SubheaderSeparator } from '../../../layout/SubHeader/SubHeader';
+import SubHeader, { SubHeaderLeft } from '../../../layout/SubHeader/SubHeader';
 import Button from '../../../components/bootstrap/Button';
 import Page from '../../../layout/Page/Page';
 import Card, { CardBody, CardHeader, CardLabel, CardTitle } from '../../../components/bootstrap/Card';
@@ -97,7 +97,6 @@ router.push('/users');
 					<Button color='info' isLink icon='ArrowBack' onClick={() => router.back()}>
 						Back to List
 					</Button>
-					<SubheaderSeparator />
 					<span className='text-muted'>Add Goods Information</span>
 				</SubHeaderLeft>
 			</SubHeader>

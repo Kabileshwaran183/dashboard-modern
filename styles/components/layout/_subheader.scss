@@ -94,12 +94,3 @@
 	display: flex;
 	align-items: center;
 }
-
-.subheader-separator {
-	height: 2rem;
-	border-left: 1px solid map-deep-get($subheader, separator, border-color);
-
-	@include media-breakpoint-down(sm) {
-		display: none;
-	}
-}

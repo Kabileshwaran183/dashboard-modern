@@ -1,21 +1,23 @@
+import Head from 'next/head';
+
+
+
 import React, { useContext, useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTour } from '@reactour/tour';
 import PageWrapper from '../layout/PageWrapper/PageWrapper';
 import SubHeader, {
 	SubHeaderLeft,
 	SubHeaderRight,
-	SubheaderSeparator,
 } from '../layout/SubHeader/SubHeader';
 import CommonAvatarTeam from '../common/partial/other/CommonAvatarTeam';
 import ThemeContext from '../context/themeContext';
 import Page from '../layout/Page/Page';
-import Popovers from '../components/bootstrap/Popovers';
 import Button, { ButtonGroup } from '../components/bootstrap/Button';
-import { TABS, TTabs } from '../common/type/helper';
+import { TABS } from '../common/type/helper';
 import CommonDashboardAlert from '../common/partial/CommonDashboardAlert';
 import CommonDashboardUserCard from '../common/partial/CommonDashboardUserCard';
 import CommonDashboardMarketingTeam from '../common/partial/CommonDashboardMarketingTeam';
@@ -29,9 +31,6 @@ import CommonMyWallet from '../common/partial/CommonMyWallet';
 import useDarkMode from '../hooks/useDarkMode';
 const Index: NextPage = () => {
 	const { mobileDesign } = useContext(ThemeContext);
-	/**
-	 * Tour Start
-	 */
 	const { setIsOpen } = useTour();
 	const [activeTab, setActiveTab] = useState(TABS.YEARLY);
 	const { themeStatus } = useDarkMode();
@@ -69,6 +68,7 @@ const Index: NextPage = () => {
 							</Button>
 						))}
 					</ButtonGroup>
+					
 				</SubHeaderLeft>
 				<SubHeaderRight>
 					<CommonAvatarTeam>
@@ -76,6 +76,7 @@ const Index: NextPage = () => {
 					</CommonAvatarTeam>
 				</SubHeaderRight>
 			</SubHeader>
+			
 			<Page container='fluid'>
 				<div className='row'>
 					<div className='col-12'>
