@@ -156,13 +156,13 @@ const steps = [
 		content: () => <DarkModeTour />,
 	},
 	{
+		selector: getTargetName('fullscreen'),
+		content: () => <FullscreenTour />,
+	},
+	{
 		selector:`[href="/users"]`,
 		content: () => <UsersTour />,
 		
-	},
-	{
-		selector: getTargetName('fullscreen'),
-		content: () => <FullscreenTour />,
 	},
 	{
 		selector: `[href="/auth-pages/login"]`,

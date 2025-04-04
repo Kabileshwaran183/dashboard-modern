@@ -84,7 +84,7 @@ export const demoPagesMenu = {
 		id: 'signUp',
 		text: 'Sign Up',
 		path: 'auth-pages/sign-up',
-		icon: 'PersonAdd',  
+		icon: 'PersonAdd',
 	},
 	
 };

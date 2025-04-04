@@ -10,7 +10,6 @@ import { dashboardPagesMenu, demoPagesMenu } from '../../../menu';
 import ThemeContext from '../../../context/themeContext';
 import Icon from '../../../components/icon/Icon';
 import Aside, { AsideBody, AsideFoot, AsideHead } from '../../../layout/Aside/Aside';
-import Popovers from '../../../components/bootstrap/Popovers';
 
 const DefaultAside = () => {
 	const { asideStatus, setAsideStatus } = useContext(ThemeContext);
@@ -31,13 +30,6 @@ const DefaultAside = () => {
 			<AsideBody>
 				<Navigation menu={dashboardPagesMenu} id='aside-dashboard' />
 				<NavigationLine />
-
-				{!doc && (
-					<>
-						<Navigation menu={demoPagesMenu} id='aside-demo-pages' />
-						<NavigationLine />
-					</>
-				)}
 
 				{/* Always show Login & Sign-Up */}
 				<Navigation menu={{
