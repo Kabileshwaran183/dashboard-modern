@@ -1,23 +1,19 @@
 import Head from 'next/head';
-
-
-
-import React, { useContext, useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
-
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTour } from '@reactour/tour';
-import PageWrapper from '../layout/PageWrapper/PageWrapper';
-import SubHeader, {
-	SubHeaderLeft,
-	SubHeaderRight,
-} from '../layout/SubHeader/SubHeader';
-import CommonAvatarTeam from '../common/partial/other/CommonAvatarTeam';
+import React, { useContext, useEffect, useState } from 'react';
+
 import ThemeContext from '../context/themeContext';
+import useDarkMode from '../hooks/useDarkMode';
+
+import SubHeader, {SubHeaderLeft,SubHeaderRight,} from '../layout/SubHeader/SubHeader';
+import PageWrapper from '../layout/PageWrapper/PageWrapper';
+import CommonAvatarTeam from '../components/subheader/CommonAvatarTeam';
 import Page from '../layout/Page/Page';
 import Button, { ButtonGroup } from '../components/bootstrap/Button';
-import { TABS } from '../common/type/helper';
+
 import CommonDashboardAlert from '../common/partial/CommonDashboardAlert';
 import CommonDashboardUserCard from '../common/partial/CommonDashboardUserCard';
 import CommonDashboardMarketingTeam from '../common/partial/CommonDashboardMarketingTeam';
@@ -28,8 +24,14 @@ import CommonDashboardUserIssue from '../common/partial/CommonDashboardUserIssue
 import CommonDashboardSalesByStore from '../common/partial/CommonDashboardSalesByStore';
 import CommonDashboardWaitingAnswer from '../common/partial/CommonDashboardWaitingAnswer';
 import CommonMyWallet from '../common/partial/CommonMyWallet';
-import useDarkMode from '../hooks/useDarkMode';
+
 const Index: NextPage = () => {
+	type TTabs = 'Weekly' | 'Monthly' | 'Yearly';
+	const TABS: { [key: string]: TTabs } = {
+		WEEKLY: 'Weekly',
+		MONTHLY: 'Monthly',
+		YEARLY: 'Yearly',
+	};
 	const { mobileDesign } = useContext(ThemeContext);
 	const { setIsOpen } = useTour();
 	const [activeTab, setActiveTab] = useState(TABS.YEARLY);
@@ -68,7 +70,6 @@ const Index: NextPage = () => {
 							</Button>
 						))}
 					</ButtonGroup>
-					
 				</SubHeaderLeft>
 				<SubHeaderRight>
 					<CommonAvatarTeam>

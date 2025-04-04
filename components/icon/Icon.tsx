@@ -1,8 +1,9 @@
 import React, { forwardRef, HTMLAttributes, memo, ReactNode } from 'react';
 import classNames from 'classnames';
+import pascalcase from 'pascalcase';
+
 import * as SvgIcon from './svg-icons';
 import * as Material from './material-icons';
-import pascalcase from 'pascalcase';
 import { TColor } from '../../type/color-type';
 import { TIcons, TIconsSize } from '../../type/icons-type';
 

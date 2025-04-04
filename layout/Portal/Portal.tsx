@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
 import { FC, ReactNode, useContext } from 'react';
+
 import ThemeContext from '../../context/themeContext';
 import useMounted from '../../hooks/useMounted';
 

@@ -13,12 +13,11 @@ import React, {
 } from 'react';
 import { Manager, Popper, Reference } from 'react-popper';
 import classNames from 'classnames';
+
 import useDarkMode from '../../hooks/useDarkMode';
-
 import { IButtonProps } from './Button';
-import { TDropdownDirection } from '../../type/dropdown-type';
 import useEventOutside from '../../hooks/useEventOutside';
-
+export type TDropdownDirection = 'up' | 'end' | 'down' | 'start';
 interface IDropdownToggleProps {
 	children: ReactElement<IButtonProps> | ReactNode;
 	isOpen?: boolean;

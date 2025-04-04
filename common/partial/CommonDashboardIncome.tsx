@@ -20,12 +20,18 @@ import { average, priceFormat } from '../../helpers/helpers';
 import PercentComparison from '../../components/extras/PercentComparison';
 import dayjs from 'dayjs';
 import useDarkMode from '../../hooks/useDarkMode';
-import { TABS, TTabs } from '../type/helper';
 
+type TTabs = 'Weekly' | 'Monthly' | 'Yearly';
 interface ICommonDashboardIncomeProps {
 	activeTab: TTabs;
 }
 const CommonDashboardIncome: FC<ICommonDashboardIncomeProps> = ({ activeTab }) => {
+	
+	const TABS: { [key: string]: TTabs } = {
+		WEEKLY: 'Weekly',
+		MONTHLY: 'Monthly',
+		YEARLY: 'Yearly',
+	};
 	const { darkModeStatus } = useDarkMode();
 
 	const [isPending, startTransition] = useTransition();
