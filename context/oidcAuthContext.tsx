@@ -24,7 +24,7 @@ const oidcConfig = {
   response_type: 'code',
   scope: 'offline_access JewelleryX',
   post_logout_redirect_uri: baseUrl,
-  userStore: new WebStorageStateStore({ store: window.localStorage }),
+  userStore: typeof window !== 'undefined' ? new WebStorageStateStore({ store: window.localStorage }) : undefined,
   automaticSilentRenew: true,
   // You can add more config options as needed
 };
