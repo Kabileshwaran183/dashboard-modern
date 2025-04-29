@@ -6,8 +6,8 @@ import { ToastContainer } from 'react-toastify';
 import { TourProvider } from '@reactour/tour';
 import { ReactNotifications } from 'react-notifications-component';
 import { appWithTranslation } from 'next-i18next';
-import { AuthContextProvider } from '../context/authContext';
 import { ThemeContextProvider } from '../context/themeContext';
+import OidcAuthContext, { OidcAuthProvider } from '../context/oidcAuthContext';
 import useDarkMode from '../hooks/useDarkMode';
 import COLORS from '../common/data/enumColors';
 import { getOS } from '../helpers/helpers';
@@ -38,7 +38,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 	};
 
 	return (
-		<AuthContextProvider>
+		<OidcAuthProvider>
 			<ThemeContextProvider>
 				<ThemeProvider theme={theme}>
 					<TourProvider
@@ -62,7 +62,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 					</TourProvider>
 				</ThemeProvider>
 			</ThemeContextProvider>
-		</AuthContextProvider>
+		</OidcAuthProvider>
 	);
 };
 
